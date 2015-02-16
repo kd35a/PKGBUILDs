@@ -1,0 +1,35 @@
+# Maintainer: Fredrik Strandin <fredrik@strandin.name>
+
+pkgname=minizinc-jacop-lib
+pkgver=4.2.0
+pkgrel=1
+pkgdesc='JaCoP is a Java Constraint Programming solver.'
+arch=('i686' 'x86_64')
+url='http://jacop.eu/'
+license=('AGPL3' 'custom')
+depends=('minizinc')
+source=(http://downloads.sourceforge.net/sourceforge/jacop-solver/minizinc_jacop_lib.zip
+        LICENSE)
+md5sums=('248c69ab20be884e49ca4df398c5b296'
+         'b63423ce83bbffe579b1667fd5d7806f')
+sha256sums=('d558ab23db595e73adc230c9f139588ef3c1b354be5225800de3708e0554cd03'
+            '638180ca4e27c815e1857f56e5a765d65f0e6bf5db0439a6e0eab103fbdf68f6')
+
+package() {
+    install -d -m755 ${pkgdir}/usr/lib/minizinc/jacop/
+    install -m644 \
+        ${srcdir}/jacop/*.mzn \
+        ${pkgdir}/usr/lib/minizinc/jacop/
+
+    install -d -m755 ${pkgdir}/usr/share/doc/minizinc-jacop-lib/
+    install -m644 \
+        ${srcdir}/jacop/README \
+        ${pkgdir}/usr/share/doc/minizinc-jacop-lib/README
+
+    install -d -m755 ${pkgdir}/usr/share/licenses/minizinc-jacop-lib/
+    install -m644 \
+        ${srcdir}/LICENSE \
+        ${pkgdir}/usr/share/licenses/minizinc-jacop-lib/LICENSE
+}
+
+# vim:set ts=2 sw=2 et:

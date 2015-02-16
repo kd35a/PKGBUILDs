@@ -1,0 +1,22 @@
+# Maintainer: Fredrik Strandin <fredrik@strandin.name>
+
+pkgname=ttf-bttf
+pkgver=1.0
+pkgrel=1
+pkgdesc="Back to the Future font"
+arch=('any')
+url=('http://www.dafont.com/back-to-the-future.font')
+license=('unknown')
+depends=('fontconfig' 'xorg-font-utils')
+source=('back_to_the_future.zip::http://img.dafont.com/dl/?f=back_to_the_future')
+md5sums=('703ab03824c5b0a19fa7b1899ce4a26e')
+sha256sums=('d2a3056802350fad9966493dc2cc76910ebb5649b1fb1e11422b37f39364c6e5')
+install=${pkgname}.install
+
+package()
+{
+  install -d -m755 $pkgdir/usr/share/fonts/TTF
+  install -m644 $srcdir/BTTF.ttf $pkgdir/usr/share/fonts/TTF
+}
+
+# vim:set ts=2 sw=2 et:
