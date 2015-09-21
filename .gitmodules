@@ -1,12 +1,16 @@
 [submodule "hunspell-en-us-large"]
 	path = hunspell-en-us-large
-	url = https://aur@aur4.archlinux.org/hunspell-en-us-large.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/hunspell-en-us-large.git
+	url = https://aur.archlinux.org/hunspell-en-us-large.git
+	pushurl = ssh+git://aur@aur.archlinux.org/hunspell-en-us-large.git
 [submodule "dspdfviewer"]
 	path = dspdfviewer
-	url = https://aur@aur4.archlinux.org/dspdfviewer.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/dspdfviewer.git
+	url = https://aur.archlinux.org/dspdfviewer.git
+	pushurl = ssh+git://aur@aur.archlinux.org/dspdfviewer.git
 [submodule "libminizinc"]
 	path = libminizinc
-	url = https://aur@aur4.archlinux.org/libminizinc.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/libminizinc.git
+	url = https://aur.archlinux.org/libminizinc.git
+	pushurl = ssh+git://aur@aur.archlinux.org/libminizinc.git
+[submodule "mop"]
+	path = mop
+	url = https://aur.archlinux.org/mop.git
+	pushurl = ssh+git://aur@aur.archlinux.org/mop.git
